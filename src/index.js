@@ -1,20 +1,16 @@
 import readlineSync from 'readline-sync';
-import { game } from './games/brain-even';
 
 export const getRandomInt = (min, max) => (Math.floor(Math.random() * (max - min)) + min);
 
 export const builder = (rules, data) => {
-
   console.log('Welcome to the Brain Games!');
   console.log(rules);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-
   const iter = () => {
     let i = 0;
-
     while (i < 3) {
-      let dataValue = data();
+      const dataValue = data();
       const question = dataValue[0];
       const correctAnswer = dataValue[1];
       console.log(`Question: ${question}`);
@@ -28,7 +24,7 @@ export const builder = (rules, data) => {
         return null;
       }
     }
-    console.log(`Congratulations, ${userName}!`);
-  }
+    return console.log(`Congratulations, ${userName}!`);
+  };
   iter();
-}
+};

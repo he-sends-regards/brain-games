@@ -1,4 +1,4 @@
-import { getRandomInt, builder} from '..';
+import { getRandomInt, builder } from '..';
 
 const rules = 'What is the result of the expression?';
 
