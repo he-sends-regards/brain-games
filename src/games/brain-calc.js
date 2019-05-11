@@ -3,9 +3,9 @@ import { getRandomInt, builder } from '..';
 const rules = 'What is the result of the expression?';
 
 const data = () => {
-  const num1 = getRandomInt(1, 100);
-  const num2 = getRandomInt(1, 100);
-  const operation = getRandomInt(0, 2);
+  const num1 = getRandomInt(1, 10);
+  const num2 = getRandomInt(1, 10);
+  const operation = getRandomInt(0, 3);
   let question;
   let correctAnswer;
 
