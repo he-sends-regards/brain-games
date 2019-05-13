@@ -4,4 +4,5 @@ Install: sudo npm install brain-games-postscriptumno -g <br>
 <a href="https://travis-ci.org/postscriptumno/project-lvl1-s486"><img src="https://travis-ci.org/travis-ci/travis-web.svg?branch=master"/></a> <br>
 
 Asciinema к заданию 4: https://asciinema.org/a/V59WFbHKPN05FkXv9DQggpDBa<br>
-Asciinema к заданию 5: https://asciinema.org/a/UH2Xd34ZixiIYTITwwxlVka9t
+Asciinema к заданию 5: https://asciinema.org/a/UH2Xd34ZixiIYTITwwxlVka9t<br>
+Asciinema к заданию 6: https://asciinema.org/a/RMsDlUDP7iyE0ZIXFG3UPYUsC
