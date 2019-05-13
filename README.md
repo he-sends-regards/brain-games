@@ -6,4 +6,5 @@ Install: sudo npm install brain-games-postscriptumno -g <br>
 Asciinema к заданию 4: https://asciinema.org/a/V59WFbHKPN05FkXv9DQggpDBa<br>
 Asciinema к заданию 5: https://asciinema.org/a/UH2Xd34ZixiIYTITwwxlVka9t<br>
 Asciinema к заданию 6: https://asciinema.org/a/RMsDlUDP7iyE0ZIXFG3UPYUsC<br>
-Asciinema к заданию 7: https://asciinema.org/a/y9HsoZkUnm5zw0YSafXOsjIEU
+Asciinema к заданию 7: https://asciinema.org/a/y9HsoZkUnm5zw0YSafXOsjIEU<br>
+Asciinema к заданию 8: https://asciinema.org/a/o018WEmGhCHYIX0gf4mvslD6E
