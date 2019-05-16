@@ -1,6 +1,6 @@
 {
   "name": "brain-games-postscriptumno",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "description": "First Hexlet Project",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
