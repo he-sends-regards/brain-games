@@ -12,7 +12,6 @@ const generateGameData = () => {
   let i = 1;
   while (i < progressionLength) {
     progression[i] = progression[i - 1] + a;
-    console.log(progression[i]);
     i += 1;
   }
   const missed = getRandomInt(0, 9);
