@@ -1,27 +1,30 @@
-import { getRandomInt, builder } from '..';
+import builder from '..';
+import getRandomInt from '../utils';
 
-const rules = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
-const data = () => {
+const generateGameData = () => {
   const num1 = getRandomInt(1, 10);
   const num2 = getRandomInt(1, 10);
   const operation = getRandomInt(0, 3);
   let question;
   let correctAnswer;
 
-  if (operation === 0) {
-    question = `${num1} + ${num2}`;
-    correctAnswer = num1 + num2;
-  } else if (operation === 1) {
-    question = `${num1} - ${num2}`;
-    correctAnswer = num1 - num2;
-  } else if (operation === 2) {
-    question = `${num1} * ${num2}`;
-    correctAnswer = num1 * num2;
+  switch (operation) {
+    case 0:
+      question = `${num1} + ${num2}`;
+      correctAnswer = num1 + num2;
+      break;
+    case 1:
+      question = `${num1} - ${num2}`;
+      correctAnswer = num1 - num2;
+      break;
+    default:
+      question = `${num1} * ${num2}`;
+      correctAnswer = num1 * num2;
+      break;
   }
   return [question, correctAnswer.toString()];
 };
 
-const game = () => builder(rules, data);
-
-export default game;
+export default () => builder(description, generateGameData);

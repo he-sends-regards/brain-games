@@ -1,16 +1,16 @@
-import { getRandomInt, builder } from '..';
+import builder from '..';
+import getRandomInt from '../utils';
 
-const rules = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
-const data = () => {
+const generateGameData = () => {
   const n1 = getRandomInt(1, 10);
-  let n2; let n3; let n4; let n5; let n6; let n7; let n8; let n9; let
-    n10;
-  const progression = [n1, n2, n3, n4, n5, n6, n7, n8, n9, n10];
   const a = getRandomInt(1, 10);
+  const progressionLength = 10;
+  const progression = [n1];
   let question = `${progression[0]}`;
   let i = 1;
-  while (i < 10) {
+  while (i < progressionLength) {
     progression[i] = progression[i - 1] + a;
     console.log(progression[i]);
     i += 1;
@@ -19,7 +19,7 @@ const data = () => {
   const correctAnswer = progression[missed];
   progression[missed] = '..';
   i = 1;
-  while (i < 9) {
+  while (i < progressionLength - 1) {
     question += ` ${progression[i].toString()}`;
     i += 1;
   }
@@ -27,6 +27,4 @@ const data = () => {
   return [question, correctAnswer.toString()];
 };
 
-const game = () => builder(rules, data);
-
-export default game;
+export default () => builder(description, generateGameData);
