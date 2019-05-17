@@ -3,25 +3,22 @@ import getRandomInt from '../utils';
 
 const description = 'What number is missing in the progression?';
 
+const progressionLength = 10;
+
 const generateGameData = () => {
-  const n1 = getRandomInt(1, 10);
-  const a = getRandomInt(1, 10);
-  const progressionLength = 10;
-  const progression = [n1];
+  const firstElement = getRandomInt(1, 10);
+  const progressionDifference = getRandomInt(1, 10);
+  const progression = [];
   let question = `${progression[0]}`;
-  let i = 1;
+  let i = 0;
   while (i < progressionLength) {
-    progression[i] = progression[i - 1] + a;
+    progression[i] = firstElement + progressionDifference * i;
     i += 1;
   }
-  const missed = getRandomInt(0, 9);
-  const correctAnswer = progression[missed];
-  progression[missed] = '..';
-  i = 1;
-  while (i < progressionLength - 1) {
-    question += ` ${progression[i].toString()}`;
-    i += 1;
-  }
+  const hiddenElementPosition = getRandomInt(0, progressionLength - 1);
+  const correctAnswer = progression[hiddenElementPosition];
+  progression[hiddenElementPosition] = '..';
+  question = progression.join(' ');
 
   return [question, correctAnswer.toString()];
 };

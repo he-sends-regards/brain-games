@@ -7,7 +7,7 @@ const isPrime = (num) => {
   let prime = true;
   let i = 2;
   while (i <= 10) {
-    if ((num % i === 0) && (num / i !== 1)) prime = false;
+    if ((num % i === 0) || (num / i !== 1) || (num < 2)) prime = false;
     i += 1;
   }
   return prime;
@@ -15,7 +15,7 @@ const isPrime = (num) => {
 
 const generateGameData = () => {
   const question = getRandomInt(1, 100);
-  const correctAnswer = (isPrime(question) === true ? 'yes' : 'no');
+  const correctAnswer = (isPrime(question) ? 'yes' : 'no');
 
   return [question, correctAnswer.toString()];
 };
