@@ -5,10 +5,10 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 const isPrime = (num) => {
   let prime = true;
-  let i = 2;
-  while (i <= 10) {
-    if ((num % i === 0) || (num / i !== 1) || (num < 2)) prime = false;
-    i += 1;
+  const limitPrimeCheck = Math.sqrt(num);
+  console.log(limitPrimeCheck);
+  for (let i = 2; i <= limitPrimeCheck; i += 1) {
+    if (num % i === 0) prime = false;
   }
   return prime;
 };
